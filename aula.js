@@ -1,20 +1,21 @@
 //Criado por Vinícius Gabriel
 //criado usando POO
 //criação da classe 
-class Pessoa {
+class Poligono {
     //criação do construtor e seus atributos
-    constructor(nome, sobrenome, anoNascimento) {
-      this.nome = nome;
-      this.sobrenome = sobrenome;
-      this.anoNascimento = anoNascimento;
+    constructor(base, altura) {
+      this.base = base;
+      this.altura = altura;
     }
-    //criação do método
-    calculaIdade(){
-        return(2021 - this.anoNascimento)
+    //criação dos métodos
+    somar(){
+        return(this.base + this.altura)
     }
-   
+    area(){
+        return(this.base * this.altura)
+    }
   }
-  //meu objeto que exibirá seu nome concatenado com o sobrenome, além do cálculo da sua idade
-  eu = new Pessoa("vinicius", "melo", 2004)
-  console.log(`Olá ${eu.nome} ${eu.sobrenome}`)
-  console.log(`Neste ano você completa ${eu.calculaIdade()} anos`)
+  //meu objeto que exibirá a soma de sua base e altura, além do calculo da área.
+  quadrado = new Poligono(4, 2)
+  console.log(quadrado.somar())
+  console.log(quadrado.area())
